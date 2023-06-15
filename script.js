@@ -24,6 +24,15 @@ task_button.addEventListener("click",function(){
     
 })
 
+input_field.addEventListener("keydown",(e)=>{
+    if(e.key === 'Enter'){
+        let text_field = input_field.value; 
+        push(tasks_db,text_field);
+        console.log(`${text_field} added to the database`); 
+        // add_list_element(text_field); 
+    }
+})
+
 // console.log(add(5,5)); 
 
 onValue(tasks_db, function(snapshot){
